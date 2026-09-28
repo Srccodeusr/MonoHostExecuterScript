@@ -12,7 +12,7 @@
 
 **One interactive script to install, run, restart, update and delete [MonoWeb](https://github.com/Srccodeusr/MonoWeb) — plus a Cloudflare Tunnel helper.**
 
-![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
+![License](https://img.shields.io/badge/license-MEL--1.0-blue?style=flat-square)
 ![Shell](https://img.shields.io/badge/shell-bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 ![Platform](https://img.shields.io/badge/platform-Linux-informational?style=flat-square)
 ![Version](https://img.shields.io/badge/version-2.0.0-lightgrey?style=flat-square)
@@ -301,7 +301,7 @@ Start with **8) View Logs** — it shows the tail of every log, and can follow o
 
 ## Changelog
 
-**2.0.0** — Rewritten for [MonoWeb](https://github.com/Srccodeusr/MonoWeb): new numbered-menu UI, Install / Run (Dev or Prod) / Restart / Stop / Update / Delete, background process management, automatic `.env` setup, backups, Cloudflare Tunnel with saved settings, status and log viewers.
+**2.0.0** — Now under the MonoHost Executer License (MEL-1.0). Rewritten for [MonoWeb](https://github.com/Srccodeusr/MonoWeb): new numbered-menu UI, Install / Run (Dev or Prod) / Restart / Stop / Update / Delete, background process management, automatic `.env` setup, backups, Cloudflare Tunnel with saved settings, status and log viewers.
 
 ---
 
@@ -314,4 +314,15 @@ Start with **8) View Logs** — it shows the tail of every log, and can follow o
 
 ## License
 
-Released under the **MIT License** — see [LICENSE](LICENSE).
+Released under the **MonoHost Executer License (MEL-1.0)** — a source-available license. Read the full text in [LICENSE.md](LICENSE.md).
+
+| | |
+| :-: | --- |
+| ✅ | Use it freely, personally or commercially — including to run your own hosting business |
+| ✅ | Modify it and share it, as long as you keep the license and the credits, and mark your changes |
+| ✅ | Charge for *services* that use it (installation, hosting, support) |
+| ❌ | Sell, rent or paywall the script itself |
+| ❌ | Remove the credits or pass it off as your own work |
+| ❌ | Hide backdoors or secret data collection in a modified copy |
+
+The table is only a summary; [LICENSE.md](LICENSE.md) is what counts. MonoWeb, Node.js, `cloudflared` and everything else the script installs are governed by their own licenses.
