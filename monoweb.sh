@@ -33,9 +33,6 @@ SCRIPT_CREDIT="prime.dev1"
 : "${HOME:=/root}"
 export HOME
 
-# `curl … | bash` leaves stdin on the pipe — reattach the terminal so prompts work.
-if [[ ! -t 0 ]] && { : </dev/tty; } 2>/dev/null; then exec </dev/tty; fi
-
 # -----------------------------------------------------------------------------
 # Configuration
 # -----------------------------------------------------------------------------
@@ -1444,19 +1441,41 @@ Environment overrides:
   MONOWEB_BRANCH  branch to clone       (default: the repo's default branch)
   MONOWEB_DIR     install directory     (default: ~/monoweb)
   MONOWEB_HOME    logs / pids / state   (default: ~/.monoweb)
+  MONOWEB_BACKUP_DIR  where backups go  (default: ~/monoweb-backups)
+
+One-liner:
+  curl -fsSL https://raw.githubusercontent.com/Srccodeusr/MonoHostExecuterScript/main/monoweb.sh | bash
 EOF
 }
 
 # -----------------------------------------------------------------------------
 # Entry point
+#   Everything lives in main() and is invoked on the very last line, so bash has
+#   read the whole script before stdin is swapped. That is what makes
+#   `curl -fsSL <url> | bash` work: the script arrives on stdin, then we re-attach
+#   the real terminal for the prompts.
 # -----------------------------------------------------------------------------
-case "${1:-}" in
-  -h|--help)    usage; exit 0 ;;
-  -v|--version) printf '%s v%s\n' "$SCRIPT_NAME" "$SCRIPT_VERSION"; exit 0 ;;
-esac
+main() {
+  case "${1:-}" in
+    -h|--help)    usage; exit 0 ;;
+    -v|--version) printf '%s v%s\n' "$SCRIPT_NAME" "$SCRIPT_VERSION"; exit 0 ;;
+  esac
 
-ui_init
-trap on_int INT TERM
-trap cleanup EXIT
-ensure_dirs
-main_menu
+  if [[ ! -t 0 ]]; then
+    if { : </dev/tty; } 2>/dev/null; then
+      exec </dev/tty
+    else
+      printf 'MonoWeb Executor needs an interactive terminal (no TTY found).\n' >&2
+      printf 'Download it and run it from a real shell:  bash monoweb.sh\n' >&2
+      exit 1
+    fi
+  fi
+
+  ui_init
+  trap on_int INT TERM
+  trap cleanup EXIT
+  ensure_dirs
+  main_menu
+}
+
+main "$@"
