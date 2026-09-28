@@ -155,23 +155,14 @@ Some jurisdictions do not allow certain exclusions or limitations. In those juri
 
 To the extent permitted by law, You will defend and hold the Licensor harmless from third-party claims, and from the resulting losses and reasonable costs, that arise from Your use, modification or Distribution of the Software, from Your Managed Services, or from Your breach of this License.
 
-## 13. Governing Law and Disputes
 
-**13.1 Governing law.** This License is governed by the laws of the jurisdiction where the Licensor resides, without regard to its conflict-of-laws rules.
+## 13. Versions
 
-**13.2 Talk first.** Before starting any legal proceeding, the party with the complaint will give written notice (for the Licensor, an issue in the Official Repository is sufficient) and both sides will try in good faith to resolve it for 30 days.
+**13.1 No automatic upgrades.** The Licensor may publish revised versions of this License (for example, MEL-1.1). Each copy of the Software is licensed under the version that accompanies it. You may choose to use the Software under a later version, but no version applies "or later" automatically.
 
-**13.3 Courts.** Any remaining dispute is decided exclusively by the courts of that jurisdiction, and each party submits to their jurisdiction.
+**13.2 Earlier releases.** Copies of the Software that You obtained under a different license, such as the MIT License that accompanied earlier releases, remain governed by that license **for those releases**. This License applies to the release it accompanies and to later releases.
 
-**13.4 Urgent relief.** Breach of §3 or §4 may cause harm that money cannot repair, so the Licensor may seek injunctive or other equitable relief without posting a bond and without waiting for the period in §13.2.
-
-## 14. Versions
-
-**14.1 No automatic upgrades.** The Licensor may publish revised versions of this License (for example, MEL-1.1). Each copy of the Software is licensed under the version that accompanies it. You may choose to use the Software under a later version, but no version applies "or later" automatically.
-
-**14.2 Earlier releases.** Copies of the Software that You obtained under a different license, such as the MIT License that accompanied earlier releases, remain governed by that license **for those releases**. This License applies to the release it accompanies and to later releases.
-
-## 15. General Provisions
+## 14. General Provisions
 
 - **Acceptance.** By using, modifying or Distributing the Software, You accept this License. If You do not accept it, You have no rights to the Software.
 - **Severability.** If any provision is held unenforceable, it is enforced to the maximum extent permitted and the rest of this License stays in effect.
